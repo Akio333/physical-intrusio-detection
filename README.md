@@ -1,6 +1,6 @@
-# **physical-intrusion-detection**
+# **Physical Intrusion Detection System**
 
-physical-intrusion-detection using Facenet and yolov3
+The solution is based on facial data and personal characteristics. It will allow the security system to verify if there is an unknown person within the restricted area. Such activity will get reported to the appropriate security personnel.
 
 ## Installation
 
