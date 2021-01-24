@@ -5,7 +5,7 @@ physical-intrusion-detection using Facenet and yolov3
 ## Installation
 
 Step 1: Make required folders and populate them by extracting files from here
-https://tinyurl.com/pids-models
+https://tinyurl.com/pids-dataset-models
 
 ```
 mkdir Face/unknown
@@ -18,4 +18,3 @@ Step 3: Install required dependancies
 ```
 pip install -r requirements.txt
 ```
-
