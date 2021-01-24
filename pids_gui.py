@@ -19,6 +19,10 @@ label.pack(side=TOP)
 background_label = Label(frame, background='black')
 background_label.pack(side=TOP)
 
+FACE_FOLDER = "/home/akio/project/pids/pids_gui/Face/"
+PERSON_FOLDER = "/home/akio/project/pids/pids_gui/Person/"
+FONT_FACE = "helvetica 15 bold"
+
 
 def Contri():
     tkinter.messagebox.showinfo(
@@ -46,21 +50,21 @@ def exit_button():
 def a():
     now = datetime.datetime.now()
     if (now.hour >= 8 and now.hour < 20):
-        os.chdir('/home/akio/project/pids/pids_gui/Face/')
+        os.chdir(FACE_FOLDER)
         os.system('python main.py')
 
     else:
-        os.chdir('/home/akio/project/pids/pids_gui/Person/')
+        os.chdir(PERSON_FOLDER)
         os.system('python detect_video.py')
 
 
 def b():
-    os.chdir('/home/akio/project/pids/pids_gui/Person/')
+    os.chdir(PERSON_FOLDER)
     os.system('python detect_video.py')
 
 
 def c():
-    os.chdir('/home/akio/project/pids/pids_gui/Face/')
+    os.chdir(FACE_FOLDER)
     os.system('python main.py')
 
 
@@ -69,29 +73,29 @@ def d():
     if str(e1.get()) == "":
         tkinter.messagebox.showinfo("Error", "Please Enter Name")
     else:
-        os.chdir('/home/akio/project/pids/pids_gui/Face/')
+        os.chdir(FACE_FOLDER)
         os.system('python main.py --mode="input" --name={}'.format(e1.get()))
 
 
-e1 = Entry(root, font=('helvetica 15 bold'))
+e1 = Entry(root, font=(FONT_FACE))
 e1.pack()
 e1.place(x=200, y=430)
 but2 = Button(frame, padx=5, pady=5, width=25, bg='white', fg='black',
-              relief=GROOVE, command=d, text='Add a new face', font=('helvetica 15 bold'))
+              relief=GROOVE, command=d, text='Add a new face', font=(FONT_FACE))
 but2.place(x=150, y=460)
 
 
 but3 = Button(frame, padx=5, pady=5, width=15, bg='white', fg='black',
-              relief=GROOVE, command=c, text='Face Recognition', font=('helvetica 15 bold'))
+              relief=GROOVE, command=c, text='Face Recognition', font=(FONT_FACE))
 but3.place(x=25, y=500)
 
 
 but4 = Button(frame, padx=5, pady=5, width=15, bg='white', fg='black',
-              relief=GROOVE, command=b, text='Person Detection', font=('helvetica 15 bold'))
+              relief=GROOVE, command=b, text='Person Detection', font=(FONT_FACE))
 but4.place(x=210, y=500)
 
 but5 = Button(frame, padx=5, pady=5, width=10, bg='white', fg='black',
-              relief=RAISED, text='Exit', command=exit_button, font=('helvetica 15 bold'))
+              relief=RAISED, text='Exit', command=exit_button, font=(FONT_FACE))
 but5.place(x=400, y=500)
 
 a()
