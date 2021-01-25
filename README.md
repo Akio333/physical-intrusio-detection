@@ -5,7 +5,7 @@ The solution is based on facial data and personal characteristics. It will allow
 ## Installation
 
 Step 1: Make required folders and populate them by extracting files from here
-https://tinyurl.com/pids-dataset-models
+https://tinyurl.com/pids-trained-models
 
 ```
 mkdir Face/unknown
